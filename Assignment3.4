@@ -1,0 +1,120 @@
+Display the details and result of at-least three students.
+
+
+package Day1;
+import java.io.*;
+import java.lang.*;
+import java.util.Scanner;
+
+class student
+{
+	String name;
+	int roll_no,sub1,sub2,total;
+	float per;
+	void getdata()
+	{
+		
+		Scanner s = new Scanner(System.in);
+		System.out.println ("Enter Name of Student :");
+		name =s.nextLine();
+		System.out.println ("Enter Roll No. of Student: ");
+		roll_no = s.nextInt();
+		System.out.println ("Enter marks out of 100 of 1st subject: ");
+		sub1 = s.nextInt();
+		System.out.println ("Enter marks out of 100 of 2nd subject: ");
+		sub2 = s.nextInt();
+	}
+	void show()
+	{
+		total=sub1+sub2;
+		per=(total/200)*100;
+		System.out.println ("Roll No. = "+roll_no);
+		System.out.println ("Name = "+name);
+		System.out.println ("Marks of 1st Subject = "+sub1);
+		System.out.println ("Marks of 2nd Subject = "+sub2);
+		System.out.println ("Total Marks = "+total);
+		System.out.println ("Percentage = "+per+"%");
+	}
+}
+class program3
+{
+	public static void main(String args[]) throws IOException
+	{
+		student s1=new student();
+		student s2=new student();
+		student s3=new student();
+		System.out.println("get details of student1:");
+		s1.getdata();
+		System.out.println("get details of student2:");
+		s2.getdata();
+		System.out.println("get details of student3:");
+		s3.getdata();
+		System.out.println("details of student1:");
+		s1.show();
+		System.out.println();
+		
+		System.out.println("details of student1:");
+		s2.show();
+		System.out.println();
+		
+		System.out.println("details of student1:");
+		s3.show();
+		
+		
+	}
+}
+
+
+OUTPUT:
+get details of student1:
+Enter Name of Student :
+tom
+Enter Roll No. of Student: 
+1
+Enter marks out of 100 of 1st subject: 
+10
+Enter marks out of 100 of 2nd subject: 
+20
+get details of student2:
+Enter Name of Student :
+harry
+Enter Roll No. of Student: 
+2
+Enter marks out of 100 of 1st subject: 
+2
+Enter marks out of 100 of 2nd subject: 
+30
+get details of student3:
+Enter Name of Student :
+Dill
+Enter Roll No. of Student: 
+40
+Enter marks out of 100 of 1st subject: 
+30
+Enter marks out of 100 of 2nd subject: 
+30
+details of student1:
+Roll No. = 1
+Name = tom
+Marks of 1st Subject = 10
+Marks of 2nd Subject = 20
+Total Marks = 30
+Percentage = 15.0%
+
+details of student1:
+Roll No. = 2
+Name = harry
+Marks of 1st Subject = 2
+Marks of 2nd Subject = 30
+Total Marks = 32
+Percentage = 16.0%
+
+details of student1:
+Roll No. = 40
+Name = Dill
+Marks of 1st Subject = 30
+Marks of 2nd Subject = 30
+Total Marks = 60
+Percentage = 30.0%
+ 
+
